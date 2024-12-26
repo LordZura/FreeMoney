@@ -3,43 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Get Free Money!</title>
+    <title>Click to Get Money Prank</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
+      #prank-container {
         text-align: center;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
+        margin-top: 50px;
       }
-      .content {
-        margin-top: 20%;
-      }
-      button {
+
+      #money-button {
         padding: 10px 20px;
         font-size: 18px;
-        color: white;
-        background-color: green;
-        border: none;
-        border-radius: 5px;
         cursor: pointer;
       }
-      button:hover {
-        background-color: darkgreen;
+
+      #prank-message {
+        margin-top: 20px;
+        font-size: 24px;
+        color: #333;
       }
     </style>
   </head>
   <body>
-    <div class="content">
-      <h1>Congratulations! 🎉</h1>
-      <p>Click the button below to claim your free money!</p>
-      <button onclick="redirect()">Get Free Money!</button>
+    <div id="prank-container">
+      <button id="money-button">Click this to get money!</button>
+      <p id="prank-message"></p>
     </div>
+
     <script>
-      function redirect() {
-        // Replace this URL with your desired Rickroll link
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-      }
+      document
+        .getElementById("money-button")
+        .addEventListener("click", function () {
+          let message = document.getElementById("prank-message");
+          message.textContent = "GO";
+
+          setTimeout(() => {
+            message.textContent += " GET";
+          }, 1000);
+          setTimeout(() => {
+            message.textContent += " A";
+          }, 2000);
+          setTimeout(() => {
+            message.textContent += " JOB!";
+          }, 3000);
+
+          setTimeout(() => {
+            window.location.href =
+              "https://www.youtube.com/watch?v=JFO_HLa0UMc"; // Replace with your desired link
+          }, 3000);
+        });
     </script>
   </body>
 </html>
